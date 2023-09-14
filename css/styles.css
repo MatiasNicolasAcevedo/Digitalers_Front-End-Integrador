@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #ffa723;
+    --secondary-color: #000000d0;
+    --terciary-color: #324d00;
+    --info-color: linear-gradient(160deg, #030304 0%, #100357 100%);
+    --text-custom-light: #fffeb8c0;
+    --back-color: linear-gradient(126deg, rgba(0,0,0,1) 5%, rgba(110,0,0,1) 50%, rgba(0,0,0,1) 94%);
+    --nav-footer-color: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 100%);
+    --cyan-color: #acffddfa;
+    --button-color: #0bca0b;
+    --button-border-color: rgb(255, 252, 47);
+    --button-hover-color: #04e004;
+    --button-hover-border-color: rgb(236, 0, 0);
+}
+
+body {
+    background-image: url(/assets/images/fondo.jpg);
+    background-size: contain;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.neon {
+	color: #fff;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+}
+
+.mi-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cyan-color);
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+/* =============== [ HEADER ] ====================================================================== */
+.main-header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.main-navbar {
+    padding: 0;
+    background: var(--nav-footer-color);
+}
+
+.main-navbar .navbar-brand {
+    color: var(--primary-color);
+}
+
+.main-navbar .navbar-toggler {
+    background-color: var(--secondary-color);
+}
+
+.main-navbar .nav-link {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.main-navbar .nav-link.active {
+    color: var(--cyan-color);
+}
+
+.main-menu-icon {
+    color: var(--primary-color);
+}
+
+.main-navbar .nav-item {
+    padding: .5rem;
+    transition: .3s;
+}
+
+.main-navbar .nav-item:hover {
+    background-color: var(--primary-color);
+}
+
+.main-navbar .nav-item:hover .nav-link {
+    color:var(--cyan-color);
+}
+
+.main-navbar .navbar-brand .main-logo {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    filter: drop-shadow(1px 1px 3px var(--primary-color));
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+
+.header-user i {
+    font-size: 1.5rem;
+}
+
+.header-user-img {
+    width: 42px;
+    height: 42px;
+}
+
+/* =============== [ CAROUSEL SECTION / CAROUSEL ] ================================================= */
+.main-carousel {
+    z-index: 0;
+}
+
+/* =============== [ CAROUSEL SECTION / DESCRIPTION ] =============================================== */
+.main-info {
+    padding-top: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: var(--info-color);
+    color: var(--text-custom-light);
+}
+
+.main-info-title {
+    color: var(--cyan-color);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.main-info-text {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+}
+
+/* =============== [ MAIN ] ========================================================================== */
+.main-container {
+    background: var(--back-color);
+    flex-grow: 1;
+    padding: 0;
+}
+
+.main-container section[class*="-section"] {
+    padding: 1rem;
+}
+
+/* =============== [ MAIN / CARD SECTION ] =========================================================== */
+.card-container {
+    gap: .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16.87rem, 1fr));
+}
+
+/* =============== [ MAIN / CARD SECTION / CARD ] ===================================================== */
+.product-card {
+    width: 16.87rem;
+    border-radius: .75rem;
+    height: 32.9rem;
+    overflow-x: hidden;
+    margin: 1rem auto;
+    box-shadow: 1px 1px 8px 0 #AAA;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .3s;
+}
+
+.product-card:hover {
+    box-shadow: 2px 2px 10px 4px #767676;
+}
+
+/* =============== [ CARD HEADER ] ===================================================================== */
+.card-header {
+    display: contents;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(.5);
+    transition: all .3s ease-in;
+}
+
+.product-card:hover .card-header img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* =============== [ CARD MAIN ] ======================================================================== */
+.card-main {
+    padding: 4px 8px 16px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.card-main h2 {
+    font-size: 1.3rem;
+    color: var(--cyan-color);
+    border-bottom: 3px solid;
+    border-color: var(--button-color);
+    padding-bottom: 1px;
+}
+
+.card-main .card-description {
+    flex: 1;
+}
+
+.card-main p {
+    color: var(--text-custom-light);
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    margin: .5rem 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
+.card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+}
+
+.card-date {
+    font-style: italic;
+    color: var(--text-custom-light);
+}
+
+.card-price {
+    font-size:3rem;
+    padding-right: 12px;
+    background-size: contain;
+}
+
+/* =============== [ CARD FOOTER ] ====================================================================== */
+.card-footer {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer button {
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    padding: 6px;
+    margin: 0 0.3rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.card-footer button:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-border-color);
+}
+
+/* =============== [ FEATURES SECTION ] ================================================================== */
+.features-section {
+    background-image: linear-gradient(358deg, #060300 0%, #016116a6 50%, #060300 99%);
+    margin-top: 2rem;
+}
+
+.main-feature {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-color);
+    font-size: 2rem;
+}
+
+.main-feature i {
+    font-size: 4rem;
+}
+
+/* =============== [ FOOTER ] ============================================================================ */
+.main-footer-container {
+    background: var(--nav-footer-color);
+}
+
+.main-footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.main-footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.main-footer h3 {
+    margin-top: .8rem;
+}
+
+.main-footer h5 {
+    margin: 0.8rem;
+}
+
+.linkedin {
+    margin-left: 1.5rem;
+}
+
+.footer-logo-java {
+    font-size: 5rem;
+}
+
+/* =============== [ MEDIA QUERIES ] ===================================================================== */
+@media screen and (width < 768px ) {
+    
+    /*--==== MAIN / CARD SECTION / CARD ====--*/
+    .product-card {
+        width: 80%;
+    }
+
+    /*--==== FOOTER ====--*/
+    .main-footer-container {
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 100%);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+/* =============== [ MAIN ] ===================================================================== */
+.main-container {
+    padding: 0rem 2rem;
+}
+
+.about-us-container {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============== [ MAIN / IMAGE ] ===================================================================== */
+.about-us {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    position: relative;
+    border-radius: 30px;
+    background-image: url(/assets/images/register-back.jpg);
+    color: rgba(255, 255, 255, 0.856);
+    overflow: hidden;
+    border: solid 1px var(--primary-color);
+    -webkit-box-shadow: 14px 14px 33px -20px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 14px 14px 33px -20px rgba(0, 0, 0, 0.65);
+    box-shadow: 14px 14px 33px -20px rgba(0, 0, 0, 0.65);
+    flex-direction: column;
+}
+
+.about-us img {
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/* =============== [ MAIN / DESCRIPTION ] ===================================================================== */
+.about-us p {
+    padding: .8rem .4rem 0 .8rem;
+    font-weight: 700;
+    font-family: 'Roboto';
+}
+
+.about-us-text {
+    min-height: 320px;
+}
+
+/* =============== [ MEDIA QUERIES ] ===================================================================== */
+@media screen and (width >= 768px) {
+
+    /*--==== MAIN ====--*/
+    .about-us-container {
+        flex-direction: row;
+    }
+
+    /*--==== MAIN / IMAGE ====--*/
+    .about-us img {
+        min-height: 320px;
+    }
+}
+
+

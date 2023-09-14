@@ -1,0 +1,45 @@
+
+/* =============== [ MAIN ] ===================================================================== */
+.register-form-container {
+    background-image: url(/assets/images/register-back.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+.register-form-color {
+    color: var(--primary-color);
+}
+
+/* =============== [ MAIN / FORM REGISTER ] ===================================================================== */
+.register-form {
+    width: 60%;
+    margin: 3rem 0rem;
+}
+
+/* =============== [ MAIN / FORM REGISTER / BUTTON ] ===================================================================== */
+.register-button {
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 4rem;
+    margin-top: 2rem;
+    background: var(--button-color);
+    border-color: var(--button-border-color);
+    color: var(--secondary-color);
+}
+
+.register-button:hover {
+    background: var(--button-hover-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-border-color);
+    font-size: 1.5rem;
+}
+
+/* =============== [ MEDIA QUERIES ] ===================================================================== */
+@media screen and (width < 768px) {
+
+    /*--==== MAIN / FORM REGISTER ====--*/
+    .register-form {
+        width: 85%;
+    }
+}
+

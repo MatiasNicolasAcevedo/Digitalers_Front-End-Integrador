@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <!--=== FAVICON ===-->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <!--=== FONT-AWESOME ===-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--=== CSS BOOTSTRAP ===-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--=== CSS ===-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!--=== JS BOOTSTRAP ===-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+        crossorigin="anonymous" defer></script>
+    <!--=== JS ===-->
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <!-- =============== [ HEADER ] ======================================================================================== -->
+    <header class="main-header">
+        <!--==== NAVBAR ====-->
+        <nav class="navbar navbar-expand-md main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/java.png" alt="logo-java" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="header-user mb-md-0">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div>PEDRO GOMEZ</div>
+                        <img class="header-user-img" src="/assets/images/user.png" alt="user-logo">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- =============== [ CAROUSEL SECTION ] ======================================================================================= -->
+    <div class="container-xl p-0 main-banner">
+        <div class="row g-0">
+            <!--==== CAROUSEL ====-->
+            <div class="col-12 col-md-6 p-0">
+                <div id="main-carousel" class="carousel slide h-100" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100" data-bs-interval="3000">
+                            <img src="/assets/images/carousel1.jpg" class="d-block w-100 h-100 object-fit-cover " alt="...">
+                        </div>
+                        <div class="carousel-item h-100" data-bs-interval="3000">
+                            <img src="/assets/images/carousel2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        </div>
+                        <div class="carousel-item h-100" data-bs-interval="3000">
+                            <img src="/assets/images/carousel3.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!--==== DESCRIPTION ====-->
+            <div class="col-12 col-md-6 p-0">
+                <div class="main-info">
+                    <h1 class="main-info-title neon">Bienvenidos a Java Master !</h1>
+                    <p class="main-info-text">
+                        Esta ruta de aprendizaje te proporcionará los conocimientos necesarios para pasar de la
+                        programación en Java básica a la creación de aplicaciones avanzadas utilizando Spring Boot.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =============== [ MAIN ] ========================================================================================== -->
+    <main class="main-container container-xl">
+        <!-- =========== [ CARD SECTION ] ================================================================================== -->
+        <section class="product-section">
+            <h2 class="text-uppercase text-center text-md-start mi-titulo pb-3">Productos Destacados</h2>
+            <div class="card-container">
+                <!--==== CARD 1 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card1.jpg" alt="Logo-card-1">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Introducción a la Programación en Java</h2>
+                        <div class="card-description">
+                            <p>
+                                Este curso introductorio te llevará a través de los fundamentos de la programación utilizando Java.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">17/01/2023</div>
+                            <div class="card-price neon">$2500</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 2 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card2.jpg" alt="Logo-card-2">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Programación Orientada a Objetos en Java</h2>
+                        <div class="card-description">
+                            <p>
+                                En este curso, profundizarás en los principios de la programación orientada a objetos(POO) aplicados en Java.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">10/02/2023</div>
+                            <div class="card-price neon">$3500</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 3 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card3.jpg" alt="Logo-card-3">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Desarrollo de Aplicaciones de Consola en Java</h2>
+                        <div class="card-description">
+                            <p>
+                                Aprende a construir aplicaciones de consola interactivas en Java. Trabajar con flujos de entrada/salida.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">22/03/2023</div>
+                            <div class="card-price neon">$3500</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 4 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card4.png" alt="Logo-card-4">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Introducción a JavaFX para Interfaces Gráficas</h2>
+                        <div class="card-description">
+                            <p>
+                                JavaFX es crucial para el desarrollo de interfaces gráficas modernas en Java.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">01/04/2023</div>
+                            <div class="card-price neon">$4999</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 5 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card5.jpg" alt="Logo-card-5">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Conexión a Bases de Datos con JDBC</h2>
+                        <div class="card-description">
+                            <p>
+                                Descubre cómo interactuar con bases de datos desde aplicaciones Java utilizando JDBC.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">25/05/2023</div>
+                            <div class="card-price neon">$7500</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 6 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card6.png" alt="Logo-card-6">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Introducción a Spring Framework</h2>
+                        <div class="card-description">
+                            <p>
+                                Spring es un marco de trabajo esencial en el desarrollo de aplicaciones Java.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">20/06/2023</div>
+                            <div class="card-price neon">$8999</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 7 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card7.png" alt="Logo-card-7">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Desarrollo de Aplicaciones Web con Spring MVC</h2>
+                        <div class="card-description">
+                            <p>
+                                Aprende a construir aplicaciones web interactivas y dinámicas, utilizando Spring MVC.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">06/07/2023</div>
+                            <div class="card-price neon">$14999</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+                <!--==== CARD 8 ====-->
+                <article class="product-card">
+                    <div class="card-header">
+                        <figure>
+                            <img src="/assets/images/card8.jpg" alt="Logo-card-8">
+                        </figure>
+                    </div>
+                    <div class="card-main">
+                        <h2>Desarrollo de Aplicaciones RESTful con Spring Boot</h2>
+                        <div class="card-description">
+                            <p>
+                                En este curso descubrirás cómo desarrollar servicios web RESTful utilizando Spring Boot.
+                            </p>
+                        </div>
+                        <div class="card-prices">
+                            <div class="card-date">24/12/2023</div>
+                            <div class="card-price neon">$29999</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-details">Ver detalles</button>
+                        <button class="card-buy">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- =========== [ FEATURES SECTION ] ================================================================================== -->
+        <section class="features-section">
+            <div class="row g-0">
+                <!--==== SECTION 1 ====-->
+                <div class="col-12 col-lg-4">
+                    <div class="main-feature">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Certificados</span>
+                    </div>   
+                </div>
+                <!--==== SECTION 2 ====-->
+                <div class="col-12 col-lg-4">
+                    <div class="main-feature">
+                        <i class="fa-solid fa-fire"></i>
+                        <span>Hot Sale - 50% OFF ! </span>
+                    </div>  
+                </div>
+                <!--==== SECTION 3 ====-->
+                <div class="col-12 col-lg-4">
+                    <div class="main-feature">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Atención Online 24hs</span>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- =============== [ FOOTER ] ======================================================================================== -->
+    <footer class="main-footer-container">
+        <div class="row g-0">
+            <!--==== SECTION 1 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <div class="github">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/MatiasNicolasAcevedo" target="_blank">Github</a>
+                    </div>
+                    <div class="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/matias-nicolas-acevedo/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <a href="https://twitter.com/MatiasDevelop3r" target="_blank">Twitter</a>
+                    </div>
+                </div>   
+            </div>
+            <!--==== SECTION 2 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <i class="fa-brands fa-java footer-logo-java"></i>
+                    <h3>Copyright © 2023 - Java Master</h3>
+                </div>  
+            </div>
+            <!--==== SECTION 3 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <h5>LA EMPRESA</h5>
+                    <h6><a href="/pages/about-us/about-us.html">Sobre Nosotros</a></h6>
+                    <h6><a href="/">Política de Privacidad</a></h6>
+                    <h6><a href="/">Términos y Condiciones</a></h6>
+                    <h5>CONTACTANOS</h5>
+                    <h6>0351-1234567</h6>
+                    <h6>Lunes A Viernes</h6>
+                    <h6>DE 9:00 A 18:00 HS</h6>
+                </div>  
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

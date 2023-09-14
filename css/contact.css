@@ -1,0 +1,56 @@
+
+/* =============== [ MAIN ] ====================================================================== */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+} 
+
+/* =============== [ MAIN / FORM CONTACT ] ====================================================================== */
+.contact-form-container {
+    background-image: url(/assets/images/register-back.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    height: 50dvh;
+    padding: 1rem 2rem;
+}
+
+.contact-form {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form-color {
+    color: var(--primary-color);
+}
+
+.contact-button {
+    width: 100%;
+    background: var(--button-color);
+    border-color: var(--button-border-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background: var(--button-hover-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-border-color);
+    font-size: 1.5rem;
+}
+
+/* =============== [ MAIN / MAPS GOOGLE ] ====================================================================== */
+.contact-map {
+    width: 100%;
+    min-height: 400px;
+    height: 50dvh;
+}
