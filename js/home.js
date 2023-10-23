@@ -74,7 +74,11 @@ let productosPrimerInicio = [
     }
 ];
 
-const productos = JSON.parse(localStorage.getItem("productos")) || productosPrimerInicio;  // sino encuentra productos en el localstorage, se carga opcional.
+if(localStorage.getItem("productos") == null) {
+    localStorage.setItem("productos", JSON.stringify(productosPrimerInicio));
+}
+
+const productos = JSON.parse(localStorage.getItem("productos"));  
 const cardContainer = document.getElementById("card-container");
 
 productos.forEach((prod) => {
@@ -96,7 +100,7 @@ productos.forEach((prod) => {
                 </div>
             </div>
             <div class="card-footer">
-                <a href="/pages/product/description.html?identificador=${prod.id}" class="boton"><i class="fas fa-link"></i> Ver más</a>
+                <a href="/pages/product/description.html?identificador=e27dea38-7125-11ee-b962-0242ac120002" class="boton"><i class="fas fa-link"></i> Ver más</a>
                 <a href="#" class="boton"><i class="fa-solid fa-cart-shopping"></i> Comprar</a> 
             </div>
         </article>`;
@@ -123,8 +127,8 @@ productos.forEach((prod) => {
         </div>
     </div>
     <div class="card-footer">
-        <button class="card-details">Ver detalles</button>
-        <button class="card-buy">Comprar</button>
+        <a href="/pages/product/description.html?identificador=aashdgadhgajs" class="boton"><i class="fas fa-link"></i> Ver más</a>
+        <a href="#" class="boton"><i class="fa-solid fa-cart-shopping"></i> Comprar</a> 
     </div>
 </article>
 

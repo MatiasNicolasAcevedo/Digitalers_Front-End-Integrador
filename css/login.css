@@ -1,0 +1,40 @@
+
+.login-container {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 40%;
+    height: 60dvh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/assets/images/register-back.jpg);
+    border: 3px solid var(--primary-color);
+    box-shadow: #333 1px 0 10px;
+    border-radius: 10px;
+    margin: .5rem auto;
+}
+
+.login-form {
+    width: 80%;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.login-button {
+    width: 100%;
+    background: var(--button-color);
+    border-color: var(--button-border-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background: var(--button-hover-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-border-color);
+    font-size: 1.5rem;
+}

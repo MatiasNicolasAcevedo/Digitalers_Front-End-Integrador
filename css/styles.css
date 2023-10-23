@@ -89,11 +89,12 @@ body {
 }
 
 .main-navbar .nav-item:hover {
-    background-color: var(--primary-color);
+    background-color: var(--button-hover-border-color);
 }
 
 .main-navbar .nav-item:hover .nav-link {
     color:var(--cyan-color);
+    text-shadow: 1px 1px 0 rgb(0, 0, 0);
 }
 
 .main-navbar .navbar-brand .main-logo {
