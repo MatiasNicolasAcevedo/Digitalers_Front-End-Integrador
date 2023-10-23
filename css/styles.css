@@ -300,11 +300,13 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--cyan-color);
+    text-shadow: 1px 1px rgb(190, 0, 0);
     font-size: 2rem;
 }
 
 .main-feature i {
     font-size: 4rem;
+    text-shadow: 1px 1px rgb(190, 0, 0);
 }
 
 /* =============== [ FOOTER ] ============================================================================ */
