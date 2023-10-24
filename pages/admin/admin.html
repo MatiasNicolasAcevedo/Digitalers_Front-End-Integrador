@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Master - Admin Product</title>
+    <!--=== FAVICON ===-->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <!--=== FONT-AWESOME ===-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--=== CSS BOOTSTRAP ===-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--=== CSS ===-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <!--=== ADMIN GUARD ===-->
+    <script src="/js/guard.js"></script>
+</head>
+<body>
+    <!-- =============== [ HEADER ] ======================================================================================== -->
+    <header class="main-header">
+        <!--==== NAVBAR ====-->
+        <nav class="navbar navbar-expand-md main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/java.png" alt="logo-java" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="header-user mb-md-0">
+                        <div id="user-action">
+                            <!-- ACA SE AGREGA BOTON LOGIN -->
+                        </div>
+                        <div id="user-header-name">
+                            <!-- ACA SE AGREGA NOMBRE DESDE CURRENT-USER (LOCALSTORAGE) -->
+                        </div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <img class="header-user-img" src="/assets/images/user.png" alt="user-logo">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- =============== [ TABLE CONTAINER ] ======================================================================================== -->
+    <div class="container-lg ">
+        <div class="row">
+            <div class="col-12 col-md-12 bg-primary-subtle">
+                <!-- Input Filtrar -->
+                <div class="mb-3 mt-3 d-flex align-items-center">
+                    <label for="filtrar" class="form-label ms-1 mt-1">Filtrar</label>
+                    <input type="text" class="form-control ms-3 me-3" id="filtrar" placeholder="Nombre curso">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary admin-btn" data-bs-toggle="modal" data-bs-target="#formModal">
+                        Añadir producto
+                    </button>
+                </div>
+                <!-- TABLE -->
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Descripcion Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- ACA SE PINTAN LAS FILAS CON LOS PRODUCTOS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- =============== [ MODAL ] ======================================================================================== -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- #FORMULARIO -->
+                <form id="formularioProducto">
+                    <!-- MODAL HEADER -->
+                    <div class="modal-header">
+                        <!-- Title Modal -->
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo producto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- MODAL BODY -->
+                    <div class="modal-body">
+                        <!-- Input nombre -->
+                        <div class="mb-3">
+                            <label for="tituloProducto" class="form-label">Nombre producto</label>
+                            <input type="text" name="tituloName" class="form-control" id="tituloProducto"
+                                placeholder="Curso Spring-Boot" required minlength="3" maxlength="70">
+                        </div>
+                        <div class="mb-3 d-flex gap-3">
+                            <!-- Input precio -->
+                            <div class="w-100">
+                                <label for="precioProducto" class="form-label">Precio</label>
+                                <input type="number" name="precio" id="precioProducto" class="form-control"
+                                    placeholder="10000" required min="1" max="20000000" step=".01">
+                            </div>
+                            <!-- Select categoria -->
+                            <div class="w-100">
+                                <label for="categoriaProducto" class="form-label">Categoria</label>
+                                <select class="form-select" id="categoriaProducto" name="categoria" required>
+                                    <option value=""></option>
+                                    <option value="java">Java</option>
+                                    <option value="base-de-datos">Base de datos</option>
+                                    <option value="framework">Framework</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Input de la Imagen -->
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">URL de la imagen</label>
+                            <input type="url" name="imagen" class="form-control" id="imagen"
+                                placeholder="https://dirección-de-la-imagen.com" required minlength="3" maxlength="300">
+                        </div>
+                        <!-- Textarea -->
+                        <div class="mb-3">
+                            <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
+                            <textarea name="descripcion" class="form-control" id="descripcionProducto" rows="3" required
+                                minlength="8" maxlength="400" placeholder="Descripción del curso...">
+                            </textarea>
+                        </div>
+                    </div>
+                    <!-- MODAL FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar producto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--=== JS BOOTSTRAP ===-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!--=== JS SWEET ALERT ===-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--=== JS ===-->
+    <script src="/js/admin.js"></script>
+    <script src="/js/user-info.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>

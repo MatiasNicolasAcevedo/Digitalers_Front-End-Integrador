@@ -1,0 +1,16 @@
+
+.admin-btn {
+    font-weight: bold;
+    font-size: 1rem;
+    width: 20%;
+    height: 2.5rem;
+    background: var(--button-color);
+    border-color: var(--button-border-color);
+    color: var(--secondary-color);
+}
+
+.admin-btn:hover {
+    background: var(--button-hover-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-border-color);
+}
