@@ -100,36 +100,9 @@ productos.forEach((prod) => {
                 </div>
             </div>
             <div class="card-footer">
-                <a href="/pages/product/description.html?identificador=e27dea38-7125-11ee-b962-0242ac120002" class="boton"><i class="fas fa-link"></i> Ver más</a>
+                <a href="/pages/product/description.html?identificador=${prod.id}" class="boton"><i class="fas fa-link"></i> Ver más</a>
                 <a href="#" class="boton"><i class="fa-solid fa-cart-shopping"></i> Comprar</a> 
             </div>
         </article>`;
 });
 
-/*
-
-<article class="product-card">
-    <div class="card-header">
-        <figure>
-            <img src="/assets/images/card1.jpg" alt="Logo-card-1">
-        </figure>
-    </div>
-    <div class="card-main">
-        <h2>Introducción a la Programación en Java</h2>
-        <div class="card-description">
-            <p>
-                Este curso introductorio te llevará a través de los fundamentos de la programación utilizando Java.
-            </p>
-        </div>
-        <div class="card-prices">
-            <div class="card-date">17/01/2023</div>
-            <div class="card-price neon">$2500</div>
-        </div>
-    </div>
-    <div class="card-footer">
-        <a href="/pages/product/description.html?identificador=aashdgadhgajs" class="boton"><i class="fas fa-link"></i> Ver más</a>
-        <a href="#" class="boton"><i class="fa-solid fa-cart-shopping"></i> Comprar</a> 
-    </div>
-</article>
-
-*/
