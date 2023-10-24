@@ -7,7 +7,7 @@ let productosPrimerInicio = [
         descripcion: "Este curso introductorio te llevará a través de los fundamentos de la programación utilizando Java.",
         fechaDeCreacion: "17/01/2023",
         precio: 2500,
-        categoria: "Curso"
+        categoria: "java"
     },
     {
         id: "fb8bafb0-7125-11ee-b962-0242ac120002",
@@ -16,7 +16,7 @@ let productosPrimerInicio = [
         descripcion: "En este curso, profundizarás en los principios de la programación orientada a objetos(POO) aplicados en Java.",
         fechaDeCreacion: "10/02/2023",
         precio: 3500,
-        categoria: "Curso"
+        categoria: "java"
     },
     {
         id: "03d2c0aa-7126-11ee-b962-0242ac120002",
@@ -25,7 +25,7 @@ let productosPrimerInicio = [
         descripcion: "Aprende a construir aplicaciones de consola interactivas en Java. Trabajar con flujos de entrada/salida.",
         fechaDeCreacion: "22/03/2023",
         precio: 3500,
-        categoria: "Curso"
+        categoria: "java"
     },
     {
         id: "0cfa2132-7126-11ee-b962-0242ac120002",
@@ -34,7 +34,7 @@ let productosPrimerInicio = [
         descripcion: "JavaFX es crucial para el desarrollo de interfaces gráficas modernas en Java.",
         fechaDeCreacion: "01/04/2023",
         precio: 4999,
-        categoria: "Curso"
+        categoria: "java"
     },
     {
         id: "173729f6-7135-11ee-b962-0242ac120002",
@@ -43,7 +43,7 @@ let productosPrimerInicio = [
         descripcion: "Descubre cómo interactuar con bases de datos desde aplicaciones Java utilizando JDBC.",
         fechaDeCreacion: "25/05/2023",
         precio: 7500,
-        categoria: "Curso"
+        categoria: "base-de-datos"
     },
     {
         id: "1dd9442e-7135-11ee-b962-0242ac120002",
@@ -52,7 +52,7 @@ let productosPrimerInicio = [
         descripcion: "Spring es un marco de trabajo esencial en el desarrollo de aplicaciones Java.",
         fechaDeCreacion: "20/06/2023",
         precio: 8999,
-        categoria: "Curso"
+        categoria: "framework"
     },
     {
         id: "241753ee-7135-11ee-b962-0242ac120002",
@@ -61,7 +61,7 @@ let productosPrimerInicio = [
         descripcion: "Aprende a construir aplicaciones web interactivas y dinámicas, utilizando Spring MVC.",
         fechaDeCreacion: "06/07/2023",
         precio: 14999,
-        categoria: "Curso"
+        categoria: "framework"
     },
     {
         id: "29783fba-7135-11ee-b962-0242ac120002",
@@ -70,7 +70,7 @@ let productosPrimerInicio = [
         descripcion: "En este curso descubrirás cómo desarrollar servicios web RESTful utilizando Spring Boot.",
         fechaDeCreacion: "24/12/2023",
         precio: 29999,
-        categoria: "Curso"
+        categoria: "framework"
     }
 ];
 

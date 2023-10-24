@@ -42,6 +42,6 @@ if(currentUser) {
         navBarLink.appendChild(adminUserLink);
     }
 } else {
-    headerUserAction.innerHTML = `<a class="btn btn-primary" href="pages/login/login.html">Login</a>`;
+    headerUserAction.innerHTML = `<a class="btn btn-primary" href="/pages/login/login.html">Login</a>`;
 }
 

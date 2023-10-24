@@ -18,6 +18,49 @@
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
+    <!-- =============== [ HEADER ] ======================================================================================== -->
+    <header class="main-header">
+        <!--==== NAVBAR ====-->
+        <nav class="navbar navbar-expand-md main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/java.png" alt="logo-java" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="header-user mb-md-0">
+                        <div id="user-action">
+                            <!-- ACA SE AGREGA BOTON LOGIN -->
+                        </div>
+                        <div id="user-header-name">
+                            <!-- ACA SE AGREGA NOMBRE DESDE CURRENT-USER (LOCALSTORAGE) -->
+                        </div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <img class="header-user-img" src="/assets/images/user.png" alt="user-logo">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="login-container container d-flex">
         <div class="card login-card" >
             <h2 class="neon mt-2">Login</h2>
@@ -52,6 +95,7 @@
     <!--=== JS SWEET ALERT ===-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--=== JS ===-->
+    <script src="/js/user-info.js"></script>
     <script src="/js/login.js"></script>
 </body>
 </html>

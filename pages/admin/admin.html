@@ -37,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Principal</a>
+                            <a class="nav-link" href="/">Principal</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
@@ -65,12 +65,12 @@
     </header>
     
     <!-- =============== [ TABLE CONTAINER ] ======================================================================================== -->
-    <div class="container-lg ">
+    <div class="container-lg br">
         <div class="row">
-            <div class="col-12 col-md-12 bg-primary-subtle">
+            <div class="col-12 col-md-12 table-container">
                 <!-- Input Filtrar -->
                 <div class="mb-3 mt-3 d-flex align-items-center">
-                    <label for="filtrar" class="form-label ms-1 mt-1">Filtrar</label>
+                    <label for="filtrar" class="form-label ms-1 mt-1 text-white">Filtrar</label>
                     <input type="text" class="form-control ms-3 me-3" id="filtrar" placeholder="Nombre curso">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary admin-btn" data-bs-toggle="modal" data-bs-target="#formModal">
@@ -114,7 +114,7 @@
                         <!-- Input nombre -->
                         <div class="mb-3">
                             <label for="tituloProducto" class="form-label">Nombre producto</label>
-                            <input type="text" name="tituloName" class="form-control" id="tituloProducto"
+                            <input type="text" name="titulo" class="form-control" id="tituloProducto"
                                 placeholder="Curso Spring-Boot" required minlength="3" maxlength="70">
                         </div>
                         <div class="mb-3 d-flex gap-3">

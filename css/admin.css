@@ -14,3 +14,36 @@
     border-color: var(--button-hover-border-color);
     color: var(--button-hover-border-color);
 }
+
+
+/* TABLA */
+
+.table-container {
+    background: var(--back-color);
+}
+.table>tbody {
+    vertical-align: middle;
+}
+
+.table-image img {
+    width: 100%;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.table-title {
+    font-weight: bold;
+}
+
+.table-description {
+    font-size: 1rem;
+    font-family: monospace;
+}
+.table-price {
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
