@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java Master - Admin Product</title>
+        <!--=== FAVICON ===-->
+        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+        <!--=== FONT-AWESOME ===-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--=== CSS BOOTSTRAP ===-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--=== CSS ===-->
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/user-admin.css">
+        <!--=== ADMIN GUARD ===-->
+        <script src="/js/guard.js"></script>
+    </head>
+<body>
+    <!-- =============== [ HEADER ] ======================================================================================== -->
+    <header class="main-header">
+        <!--==== NAVBAR ====-->
+        <nav class="navbar navbar-expand-md main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/java.png" alt="logo-java" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="header-user mb-md-0">
+                        <div id="user-action">
+                            <!-- ACA SE AGREGA BOTON LOGIN -->
+                        </div>
+                        <div id="user-header-name">
+                            <!-- ACA SE AGREGA NOMBRE DESDE CURRENT-USER (LOCALSTORAGE) -->
+                        </div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <img class="header-user-img" src="/assets/images/user.png" alt="user-logo">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =============== [ TABLE CONTAINER ] ======================================================================================== -->
+    <div class="container-lg br table-div">
+        <div class="row">
+            <div class="col-12 col-md-12 table-container ">
+                <h3 class="mi-titulo">User Admin</h3>
+                <!-- TABLE -->
+                <table class="table table-dark table-striped table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fullname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-users">
+                        <!-- ACA SE PINTAN LAS FILAS CON LOS PRODUCTOS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+
+    <!-- =============== [ MODAL ] ======================================================================================== -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- #FORMULARIO -->
+                <form id="formularioUsuario">
+                    <!-- MODAL HEADER -->
+                    <div class="modal-header">
+                        <!-- Title Modal -->
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- MODAL BODY -->
+                    <div class="modal-body">
+                        <!-- Input nombre -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" name="name" class="form-control" id="name"
+                                placeholder="Pedro Gomez" required minlength="3" maxlength="70">
+                        </div>
+                        <!-- Input email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@example.com"
+                                minlength="3" maxlength="70" required>
+                        </div>
+
+                        <div class="mb-3 d-flex gap-3">
+                            <!-- Input password -->
+                            <div class="w-100">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" minlength="3"
+                                    maxlength="70" required>
+                            </div>
+                            <!-- Select role -->
+                            <div class="w-100">
+                                <label for="role" class="form-label">Role</label>
+                                <select class="form-select" id="role" name="role" required>
+                                    <option value=""></option>
+                                    <option value="ROLE_CLIENT">Cliente</option>
+                                    <option value="ROLE_ADMIN">Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Editar usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+
+    <!-- =============== [ FOOTER ] ======================================================================================== -->
+    <footer class="main-footer-container">
+        <div class="row g-0">
+            <!--==== SECTION 1 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <div class="github">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/MatiasNicolasAcevedo" target="_blank">Github</a>
+                    </div>
+                    <div class="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/matias-nicolas-acevedo/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <a href="https://twitter.com/MatiasDevelop3r" target="_blank">Twitter</a>
+                    </div>
+                </div>   
+            </div>
+            <!--==== SECTION 2 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <i class="fa-brands fa-java footer-logo-java"></i>
+                    <h3>Copyright © 2023 - Java Master</h3>
+                </div>  
+            </div>
+            <!--==== SECTION 3 ====-->
+            <div class="col-12 col-lg-4">
+                <div class="main-footer">
+                    <h5>LA EMPRESA</h5>
+                    <h6><a href="/pages/about-us/about-us.html">Sobre Nosotros</a></h6>
+                    <h6><a href="/">Política de Privacidad</a></h6>
+                    <h6><a href="/">Términos y Condiciones</a></h6>
+                    <h5>CONTACTANOS</h5>
+                    <h6>0351-1234567</h6>
+                    <h6>Lunes A Viernes</h6>
+                    <h6>DE 9:00 A 18:00 HS</h6>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+    <!--=== JS BOOTSTRAP ===-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!--=== JS SWEET ALERT ===-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--=== JS ===-->
+    <script src="/js/user-admin.js"></script>
+    <script src="/js/user-info.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>

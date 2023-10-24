@@ -1,0 +1,34 @@
+
+body {
+    display: flex;
+}
+
+/* TABLA */
+
+.table-div {
+    flex-grow: 1;
+}
+
+.table-container {
+    background: var(--back-color);
+}
+.table>tbody {
+    vertical-align: middle;
+}
+
+.table-title {
+    font-weight: bold;
+}
+
+.table-description {
+    font-size: 1rem;
+    font-family: monospace;
+}
+.table-price {
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
+

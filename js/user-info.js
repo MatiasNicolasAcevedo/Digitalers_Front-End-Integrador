@@ -22,10 +22,10 @@ if(currentUser) {
 
         const link = document.createElement('a');
         link.classList.add('nav-link');
-        if(url.includes('admin.html')) {
+        if(url.includes('product-admin.html')) {
             link.classList.add('active');
         }
-        link.href = '/pages/admin/admin.html';
+        link.href = '/pages/admin/product-admin.html';
         link.innerText = 'Product Admin';
         adminProductLink.appendChild(link);
         navBarLink.appendChild(adminProductLink);
