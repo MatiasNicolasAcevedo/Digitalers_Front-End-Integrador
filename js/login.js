@@ -1,32 +1,44 @@
 
 const userInicio = [
     {
+        id: '1',
         fullname: 'Matias Acevedo',
         email: 'admin@admin.com',
-        id: '1',
         password: 'admin',
-        role: "ROLE_ADMIN"
+        date: '17/01/92',
+        province: 'Cordoba',
+        observation: 'Java Back-end Developer.',
+        role: 'ROLE_ADMIN'
     },
     {
-        fullname: 'Pepito Flores',
-        email: 'pepito.flores@example.com',
         id: '2',
+        fullname: 'Elena Rodriguez',
+        email: 'elena@email.com',
         password: 'alfabeta',
-        role: "ROLE_CLIENT"
+        date: '05/08/88',
+        province: 'Mendoza',
+        observation: 'Front-end Developer.',
+        role: 'ROLE_CLIENT'
     },
     {
-        fullname: 'John Doe',
-        email: 'john.doe@example.com',
         id: '3',
+        fullname: 'Juan Pérez',
+        email: 'juan@email.com',
         password: 'alfabeta',
-        role: "ROLE_CLIENT"
+        date: '12/04/89',
+        province: 'Tucuman',
+        observation: 'Database Administrator.',
+        role: 'ROLE_CLIENT'
     },
     {
-        fullname: 'Jennifer Taylor',
-        email: 'jennifer.taylor@example.com',
         id: '4',
+        fullname: 'Laura Sanchez',
+        email: 'laura@email.com',
         password: 'alfabeta',
-        role: "ROLE_CLIENT"
+        date: '21/11/95',
+        province: 'ValenCatamarcacia',
+        observation: 'UX/UI Designer.',
+        role: 'ROLE_CLIENT'
     }
 ];
 

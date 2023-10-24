@@ -1,9 +1,8 @@
-// Se ejecuta en todas las paginas - agregar script. lo mismo que login.
 
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const headerUserInfo = document.getElementById("user-header-name");
 const headerUserAction = document.getElementById("user-action");
-const navBarLink = document.getElementById("nav-list"); // revisar si es lo mismo
+const navBarLink = document.getElementById("nav-list");
 
 headerUserInfo.innerText = currentUser ? currentUser.fullname : ""; // Se setea el nombre del usuario en el navbar.
 
@@ -20,15 +19,12 @@ if(currentUser) {
         adminUserLink.id = 'nav-admin-user';
 
         const url = window.location.pathname;
-        if(url.includes('admin.html')) {
-            adminProductLink.classList.add('active');
-        }
-        if(url.includes('admin-user.html')) {
-            adminUserLink.classList.add('active');
-        }
 
         const link = document.createElement('a');
         link.classList.add('nav-link');
+        if(url.includes('admin.html')) {
+            link.classList.add('active');
+        }
         link.href = '/pages/admin/admin.html';
         link.innerText = 'Product Admin';
         adminProductLink.appendChild(link);
@@ -36,6 +32,9 @@ if(currentUser) {
 
         const linkUser = document.createElement('a');
         linkUser.classList.add('nav-link');
+        if(url.includes('user-admin.html')) {
+            linkUser.classList.add('active');
+        }
         linkUser.href = '/pages/admin/user-admin.html';
         linkUser.innerText = 'User Admin';
         adminUserLink.appendChild(linkUser);

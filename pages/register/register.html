@@ -69,7 +69,7 @@
                 <h3 class="mi-titulo">Registro</h3>
                 <div class="register-form-container register-form-color">
                     <!--==== FORM REGISTER ====-->
-                    <form class="register-form">
+                    <form class="register-form" id="register-form">
                         <div class="mb-3 mt-3 fs-4">
                             <label for="fullname" class="form-label">Nombre Completo</label>
                             <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Pedro Gomez" 
@@ -78,7 +78,7 @@
                         <div class="mb-3 mt-3 fs-4">
                             <label for="email" class="form-label">Correo Electrónico</label>
                             <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" 
-                            required minlength="5" maxlength="80" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            required minlength="5" maxlength="80" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$">
                         </div>
                         <div class="mb-3 mt-3 fs-4">
                             <label for="password" class="form-label">Contraseña</label>
@@ -188,9 +188,12 @@
     <!--=== JS BOOTSTRAP ===-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-        crossorigin="anonymous" defer></script>
+        crossorigin="anonymous"></script>
+    <!--=== JS SWEET ALERT ===-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--=== JS ===-->
     <script src="/js/user-info.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/js/register.js"></script>
 </body>
 </html> 
