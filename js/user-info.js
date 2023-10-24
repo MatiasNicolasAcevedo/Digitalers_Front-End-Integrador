@@ -4,11 +4,12 @@ const headerUserInfo = document.getElementById("user-header-name");
 const headerUserAction = document.getElementById("user-action");
 const navBarLink = document.getElementById("nav-list");
 
-headerUserInfo.innerText = currentUser ? currentUser.fullname : ""; // Se setea el nombre del usuario en el navbar.
+headerUserInfo.innerText = currentUser ? currentUser.fullname : "";
 
 if(currentUser) {
     headerUserAction.innerHTML = `<button class="btn btn-danger" onclick="logout()">Logout</button>`;
 
+    // Si tiene role admin, se crean y pintan los botones admin user y admin product.
     if(currentUser.role == "ROLE_ADMIN") {
         const adminProductLink = document.createElement('li');
         adminProductLink.classList.add('nav-item');

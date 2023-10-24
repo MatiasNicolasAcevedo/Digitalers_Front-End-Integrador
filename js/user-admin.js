@@ -1,3 +1,4 @@
+
 let idEditar;
 const tableUsers = document.getElementById("table-users");
 
@@ -6,6 +7,7 @@ const formularioUsersHTML = document.getElementById("formularioUsuario");
 
 pintarUsers(adminUsers);
 
+// FUNCION SUBMIT MODAL USER ADMIN. AGREGAR - EDITAR USUARIO.
 formularioUsersHTML.addEventListener("submit", (evt) => {
 	evt.preventDefault();
 	const el = formularioUsersHTML.elements;
@@ -50,6 +52,7 @@ formularioUsersHTML.addEventListener("submit", (evt) => {
 	el.name.focus();
 });
 
+// FUNCION PARA PINTAR LOS USUARIOS.
 function pintarUsers(array) {
 	tableUsers.innerHTML = "";
 	array.forEach(function (usuario, index) {
@@ -73,6 +76,7 @@ function pintarUsers(array) {
 	});
 }
 
+// FUNCION PARA BORRAR UN USUARIO. CON SWEET ALERT.
 const borrarUser = (idABuscar) => {
 	Swal.fire({
 		title: "Desea borrar Usuario",
@@ -102,6 +106,7 @@ const borrarUser = (idABuscar) => {
 	});
 };
 
+// FUNCION PARA SETEAR UN USUARIO EDITADO.
 const editarUser = function (idRecibido) {
 	const userEditar = adminUsers.find((usuario) => {
 		if (usuario.id === idRecibido) {

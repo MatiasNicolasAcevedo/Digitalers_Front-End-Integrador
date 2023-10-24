@@ -2,15 +2,12 @@
 const productos = JSON.parse(localStorage.getItem("productos"));  
 const cardContainer = document.getElementById("card-container");
 
-// Obtén la URL actual
 const url = new URL(window.location.href);
-
-// Obtiene el valor de la variable "identificador" de la URL
 const identificador = url.searchParams.get("identificador");
 
-const prod = productos.find((producto) => {  // Se recorre el array productos con find.
-    if(producto.id === identificador) {  // Si el id coincide.
-        return true;  // Se retorna el objeto encontrado.
+const prod = productos.find((producto) => {
+    if(producto.id === identificador) {
+        return true;
     }
 });
 

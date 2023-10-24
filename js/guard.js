@@ -1,4 +1,3 @@
-// este scrip va en paginas admin y admin user. para bloquear el acceso redireciionando.
 
 const user = JSON.parse(localStorage.getItem("currentUser"));
 

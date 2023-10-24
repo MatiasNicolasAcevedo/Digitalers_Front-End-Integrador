@@ -2,6 +2,7 @@
 const usersSaved = JSON.parse(localStorage.getItem("users"));
 const formularioRegisterHTML = document.getElementById("register-form");
 
+// EVENTO SUBMIT DEL FORM REGISTRO.
 formularioRegisterHTML.addEventListener("submit", (event) => {
     event.preventDefault();
     const elem = event.target.elements;
@@ -12,18 +13,18 @@ formularioRegisterHTML.addEventListener("submit", (event) => {
         return;
     }
 
+    // Se comprueba si existe el email.
     const checkUserIfExist = usersSaved.find((usuario) => {
         if(elem.email.value.trim() == usuario.email) {
             return true;
         }
         return false;
-    })
-    
+    });
     if(checkUserIfExist) {
         Swal.fire("El usuario ya existe", `Ya existe un usuario con el correo ${elem.email.value}`, "error");
         return;
     }
-
+    
     const nuevoUsuario = {
         id: crypto.randomUUID(),
         fullname: elem.fullname.value,
@@ -34,7 +35,6 @@ formularioRegisterHTML.addEventListener("submit", (event) => {
         observation: elem.observation.value,
         role: 'ROLE_CLIENT'
     }
-    
     usersSaved.push(nuevoUsuario);
     
     localStorage.setItem("users", JSON.stringify(usersSaved))

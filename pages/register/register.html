@@ -16,7 +16,6 @@
     <!--=== CSS ===-->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/register.css">
-    
 </head>
 <body>
     <!-- =============== [ HEADER ] ======================================================================================== -->
@@ -70,16 +69,19 @@
                 <div class="register-form-container register-form-color">
                     <!--==== FORM REGISTER ====-->
                     <form class="register-form" id="register-form">
+                        <!-- Input fullname -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="fullname" class="form-label">Nombre Completo</label>
                             <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Pedro Gomez" 
                             required minlength="5" maxlength="60">
                         </div>
+                        <!-- Input email -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="email" class="form-label">Correo Electrónico</label>
                             <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" 
                             required minlength="5" maxlength="80" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$">
                         </div>
+                        <!-- Input password -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="password" class="form-label">Contraseña</label>
                             <input type="password" id="password" name="password" class="form-control" aria-describedby="passwordHelpBlock" 
@@ -90,15 +92,18 @@
                                 </div>    
                             </div>
                         </div>
+                        <!-- Input repeat-password -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="repeat-password" class="form-label">Repetir Contraseña</label>
                             <input type="password" id="repeat-password" name="repeat-password" class="form-control" aria-describedby="passwordHelpBlock" 
                             placeholder="********" required minlength="8" maxlength="20">
                         </div>
+                        <!-- Input date -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="date" class="form-label">Fecha de Nacimiento</label>
                             <input type="date" id="date" name="date" class="form-control" placeholder="dd/mm/aaaa"/>
                         </div>
+                        <!-- Input province -->
                         <div class="mb-3 mt-3 fs-4">
                             <label for="province" class="form-label">Seleccione su Provincia</label>
                             <select name=province class="form-select">
@@ -128,6 +133,7 @@
                                 <option value="Tucuman">Tucuman</option>
                             </select>
                         </div>
+                        <!-- Input observation -->
                         <div class="mt-3 fs-4">
                             <label for="observation" class="form-label">Observaciones</label>
                             <textarea name="observation" class="form-control" id="observation" rows="3" required minlength="14" maxlength="500" 
